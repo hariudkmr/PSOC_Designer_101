@@ -1,0 +1,19 @@
+# DO NOT DELETE
+./obj/boot.o : \
+   C:/PROGRA~2/Cypress/Common/CYPRES~3/tools/include/CY8C21~2/m8c.inc\
+   C:/PROGRA~2/Cypress/Common/CYPRES~3/tools/include/CY8C21~2/m8ssc.inc\
+   C:\Users\hariu\DOCUME~1\PSOCDE~1.0PR\PSOC_1~1\PSOC_1~1\lib\GLOBAL~1.INC\
+   C:\Users\hariu\DOCUME~1\PSOCDE~1.0PR\PSOC_1~1\PSOC_1~1\memory.inc
+./obj/main.o :  ./lib/LED_PWM.h ./lib/PSoCAPI.h\
+   C:/PROGRA~2/Cypress/Common/CYPRES~3/tools/include/CY8C21~2/m8c.h
+./lib/obj/led_pwm.o :  ./lib/LED_PWM.inc\
+   C:/PROGRA~2/Cypress/Common/CYPRES~3/tools/include/CY8C21~2/m8c.inc\
+   C:\Users\hariu\DOCUME~1\PSOCDE~1.0PR\PSOC_1~1\PSOC_1~1\memory.inc
+./lib/obj/led_pwmint.o :  ./lib/LED_PWM.inc\
+   C:/PROGRA~2/Cypress/Common/CYPRES~3/tools/include/CY8C21~2/m8c.inc\
+   C:\Users\hariu\DOCUME~1\PSOCDE~1.0PR\PSOC_1~1\PSOC_1~1\memory.inc
+./lib/obj/psocconfig.o :  ./lib/GLOBAL~1.INC\
+   C:/PROGRA~2/Cypress/Common/CYPRES~3/tools/include/CY8C21~2/m8c.inc\
+   C:\Users\hariu\DOCUME~1\PSOCDE~1.0PR\PSOC_1~1\PSOC_1~1\memory.inc
+./lib/obj/psocconfigtbl.o : \
+   C:/PROGRA~2/Cypress/Common/CYPRES~3/tools/include/CY8C21~2/m8c.inc

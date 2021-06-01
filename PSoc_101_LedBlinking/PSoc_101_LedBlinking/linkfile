@@ -1,0 +1,6 @@
+-F0x30 -g -blit:0x150.0x1fff 
+ -bdata:0.0x100 -bSSCParmBlk:0x00F7.0x00FF -BInterruptRAM:0 -Bvirtual_registers  
+ -Bpsoc_101_ledblinking_RAM 
+ -o"output/PSoc_101_LedBlinking" 
+ ./obj/main.o   
+ C:/Users/hariu/DOCUME~1/PSOCDE~1.0PR/PSOC_1~1/PSOC_1~1/lib/libPSoc.a -LC:/PROGRA~2/Cypress/Common/CYPRES~3/tools/lib/LMM/eightpages C:/PROGRA~2/Cypress/Common/CYPRES~3/tools/lib/CY8C21030/cms.a C:/PROGRA~2/Cypress/Common/CYPRES~3/tools/lib/LMM/UASW/NoMAC/arith.a  

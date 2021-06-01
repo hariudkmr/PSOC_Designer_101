@@ -1,0 +1,16 @@
+Starting MAKE...
+creating project.mk 
+lib/led_pwm.asm
+lib/led_pwmint.asm
+lib/psocconfig.asm
+lib/psocconfigtbl.asm
+./boot.asm
+./main.c
+Linking..
+LMM info: area 'virtual_registers' uses 2 bytes in SRAM page 0
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+  ROM 6% full. 417 out of 8192 bytes used (does not include absolute areas).
+  RAM 2% full. 4 bytes used (does not include stack usage).
+idata dump at output/PSoc_101_LedBlinking.idata
+ 
+PSoc_101_LedBlinking - 0 error(s) 0 warning(s) 15:06:19

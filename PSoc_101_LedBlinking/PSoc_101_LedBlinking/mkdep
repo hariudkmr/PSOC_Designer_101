@@ -1,0 +1,5 @@
+-a -f project.dep -p./lib/obj/ -o.o -- -IC:/PROGRA~2/Cypress/Common/CYPRES~3/tools/include -I./lib -IC:/PROGRA~2/Cypress/Common/CYPRES~3/tools/include/CY8C21~2 -- 
+lib/led_pwm.asm   
+lib/led_pwmint.asm   
+lib/psocconfig.asm   
+lib/psocconfigtbl.asm 

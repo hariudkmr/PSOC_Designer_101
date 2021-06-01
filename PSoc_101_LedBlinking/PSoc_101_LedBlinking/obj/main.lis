@@ -1,0 +1,70 @@
+ 0000                   cpu LMM
+                        .module main.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile ./main.c
+ 0000                   .dbfile C:\Users\hariu\DOCUME~1\PSOCDE~1.0PR\PSOC_1~1\PSOC_1~1\main.c
+ 0000                   .dbfunc e main _main fV
+ 0000           _main::
+ 0000                   .dbline -1
+ 0000                   .dbline 11
+ 0000           ; //----------------------------------------------------------------------------
+ 0000           ; // C main line
+ 0000           ; //----------------------------------------------------------------------------
+ 0000           ; 
+ 0000           ; #include <m8c.h>        // part specific constants and macros
+ 0000           ; #include "PSoCAPI.h"    // PSoC API definitions for all User Modules
+ 0000           ; 
+ 0000           ; static int i;
+ 0000           ; 
+ 0000           ; void main(void)
+ 0000           ; {
+ 0000                   .dbline 13
+ 0000           ;     // Insert your main routine code here.
+ 0000           ;       LED_PWM_Start();
+ 0000 10                push X
+ 0001 7C0000            xcall _LED_PWM_Start
+ 0004 20                pop X
+ 0005 8021              xjmp L3
+ 0007           L2:
+ 0007                   .dbline 15
+ 0007           ;       while(1)
+ 0007           ;       {
+ 0007                   .dbline 16
+ 0007           ;               PRT1DR ^= 0x04;  //Port_1_2
+ 0007 450404            xor REG[0x4],4
+ 000A                   .dbline 17
+ 000A           ;               for(i=0; i < 22000; i++);
+ 000A 62D000            mov REG[0xd0],>_i
+ 000D 550100            mov [_i+1],0
+ 0010 550000            mov [_i],0
+ 0013           L5:
+ 0013                   .dbline 17
+ 0013           L6:
+ 0013                   .dbline 17
+ 0013 62D000            mov REG[0xd0],>_i
+ 0016 7601              inc [_i+1]
+ 0018 0E0000            adc [_i],0
+ 001B                   .dbline 17
+ 001B 5101              mov A,[_i+1]
+ 001D 11F0              sub A,-16
+ 001F 5100              mov A,[_i]
+ 0021 3180              xor A,-128
+ 0023 19D5              sbb A,(85 ^ 0x80)
+ 0025 CFED              jc L5
+ 0027           X1:
+ 0027                   .dbline 18
+ 0027           ;       }
+ 0027           L3:
+ 0027                   .dbline 14
+ 0027 8FDF              xjmp L2
+ 0029           X0:
+ 0029                   .dbline -2
+ 0029           L1:
+ 0029                   .dbline 0 ; func end
+ 0029 8FFF              jmp .
+ 002B                   .dbend
+                        .area data(ram, con, rel)
+ 0000                   .dbfile C:\Users\hariu\DOCUME~1\PSOCDE~1.0PR\PSOC_1~1\PSOC_1~1\main.c
+ 0000           _i:
+ 0000 0000              .byte 0,0
+ 0002                   .dbsym s i _i I
